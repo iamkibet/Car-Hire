@@ -1,49 +1,71 @@
-import React from "react";
+import React, { useState } from "react";
+import menu from "../assets/menu.svg";
+import navLinks from "../constants";
+import close from "../assets/close.svg";
 
 const Navbar = () => {
+  const [active, setActive] = useState("");
+
+  const [toggle, setToggle] = useState(false);
+
   return (
-    <header className="text-dark px-4 mx-auto">
-      <div className="flex justify-between">
-        <div className="">
-          <h1 className="text-[14px] font-bold ">
-            <a href="/" title="Car Hire">
-              {" "}
-              Car Hire | Lets Go
-            </a>
-          </h1>
-        </div>
-        <div>
-          {/* Shopping cart icon */}
-          <svg
-            className="w-6 h-6 cursor-pointer"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            aria-label="Shopping Cart"
-          >
-            {/* Icon path goes here */}
-          </svg>
-        </div>
-        <ul className="flex items-center">
-        <li className="p-4 hover:text-blue hover:bg-gray-200">
-            <a href="/">Home</a>
-          </li>
-          <li className="p-4 hover:text-blue hover:bg-gray-200">
-            <a href="/">Listings</a>
-          </li>
-          <li className="p-4 hover:text-blue hover:bg-gray-200">
-            <a href="/">Contact</a>
-          </li>
-          <li className="p-4 hover:text-blue hover:bg-gray-200">
-            <a href="/">Services</a>
-          </li>
-          <li className="p-4 hover:text-blue hover:bg-gray-200">
-            <a href="/">About</a>
-          </li>
-          <li className="p-4 hover:text-blue hover:bg-gray-200">
-            <a href="/">Login</a>
-          </li>
+    <header className="w-full flex pt-5 items-center top-0 fixed z-0 justify-between pr-10">
+      <div className="flex items-center w-full px-5">
+        <nav
+          to="#"
+          className="w-full flex items-center gap-2 sm:flex"
+          onClick={() => {
+            setActive("");
+            window.scrollTo(0, 0);
+          }}
+        >
+          <p className="text-[15px] text-black cursor-pointer flex ">
+            Car Rental &nbsp;
+             <span className="sm:block"> | 
+             Lets Go</span>
+          </p>
+        </nav>
+        <ul className="list-none gap-5 text-[15px] flex sm:flex-auto">
+          {navLinks.map((link) => (
+            <li
+            key={link.id}
+            className={`${
+              active === link.title 
+              ? "text-[#3336dd]" : "text-[#000000] flex"
+            } hover:text-[#3336dd] hover:text-[15px] font-medium cursor-pointer`}
+            onClick={() => setActive(link.title)}
+            >
+              <a href={`#${link.id}`}>{link.title}</a>
+            </li>
+          )) }
         </ul>
+        <div className="sm:flex flex-1 justify-end items-center">
+            <img 
+            src={toggle ? close : menu } 
+            alt="menu"
+            className=" bg-black w-[28px] h-[28px] cursor-pointer object-contain"
+            onClick={() => setToggle(!toggle)}
+            />
+            <div className={`${!toggle ? 'hidden' : 'flex'} p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px z-10 rounded-xl]`}>
+                  <ul className="list-none flex justify-end items-start flex-col gap-4">
+                {navLinks.map((link) => (
+                  <li
+                  key={link.id}
+                  className={`${
+                    active === link.title 
+                    ? "text-[#3336dd]" : "text-[#000000]"
+                  } hover:text-[#3336dd] hover:text-[15px] font-medium cursor-pointer`}
+                    onClick={() => {
+                    setToggle(!toggle);
+                    setActive(link.title);
+                  }}
+                  >
+                    <a href={`#${link.id}`}>{link.title}</a>
+                  </li>
+                )) }
+              </ul>
+            </div>
+        </div>
       </div>
     </header>
   );
