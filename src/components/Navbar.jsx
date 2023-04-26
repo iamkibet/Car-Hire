@@ -25,7 +25,7 @@ const Navbar = () => {
              Lets Go</span>
           </p>
         </nav>
-        <ul className="list-none gap-5 text-[15px] flex sm:flex-auto">
+        <ul className="list-none gap-5 text-[15px] flex sm:flex-auto sm-hidden">
           {navLinks.map((link) => (
             <li
             key={link.id}
@@ -39,11 +39,11 @@ const Navbar = () => {
             </li>
           )) }
         </ul>
-        <div className="sm:flex flex-1 justify-end items-center">
+        <div className="">
             <img 
             src={toggle ? close : menu } 
             alt="menu"
-            className=" bg-black w-[28px] h-[28px] cursor-pointer object-contain"
+            className=""
             onClick={() => setToggle(!toggle)}
             />
             <div className={`${!toggle ? 'hidden' : 'flex'} p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px z-10 rounded-xl]`}>
@@ -53,7 +53,7 @@ const Navbar = () => {
                   key={link.id}
                   className={`${
                     active === link.title 
-                    ? "text-[#3336dd]" : "text-[#000000]"
+                    ? "text-[#3336dd]" : "text-[#000000] flex"
                   } hover:text-[#3336dd] hover:text-[15px] font-medium cursor-pointer`}
                     onClick={() => {
                     setToggle(!toggle);
@@ -71,4 +71,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default Navbar; 
