@@ -1,13 +1,15 @@
-import react from 'react'
-import './App.css'
-import Test from './components/Test'
+import react from 'react';
+import './App.css';
+import Navbar from './components/Navbar';
+import Hero from './components/Hero';
 
 
 function App() {
  
   return (
     <div>
-      <Test />
+      <Navbar />
+      <Hero />
     </div>
   )
 }

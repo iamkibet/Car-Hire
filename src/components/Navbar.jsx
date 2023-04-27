@@ -1,75 +1,61 @@
-import React, { useState } from "react";
-import navLinks from "../constants";;
-import { Link } from "react-router-dom";
+import react from 'react'
+import { useState } from 'react';
+import MenuItems from './MenuItems';
 import { FiMenu } from 'react-icons/fi';
+import navLinks from "../constants";
+import { IoCart } from 'react-icons/io5';
+import { MenuItem } from '@material-ui/core';
 import { AiOutlineClose } from "react-icons/ai";
 
 const Navbar = () => {
-  const [active, setActive] = useState("");
 
-  const [toggle, setToggle] = useState(false);
+    const [active, setActive] = useState('false')
 
-  return (
-    <header className="w-full flex pt-5 items-center top-0 fixed z-0 justify-between pr-10">
-      <div className="flex items-center w-full px-5">
-        <nav
-          to="#"
-          className="w-full flex items-center gap-2 sm:flex"
-          onClick={() => {
-            setActive("");
-            window.scrollTo(0, 0);
-          }}
-        >
-          <p className="text-[15px] text-black cursor-pointer flex ">
-            Car Rental &nbsp;
-             <span className="sm:block"> | 
-             Lets Go</span>
-          </p>
-        </nav>
-        <ul className="list-none gap-5 text-[15px] flex sm:flex-auto sm-hidden">
-          {navLinks.map((link) => (
-            <li
-            key={link.id}
-            className={`${
-              active === link.title 
-              ? "text-[#3336dd]" : "text-[#000000] flex"
-            } hover:text-[#3336dd] hover:text-[15px] font-medium cursor-pointer`}
-            onClick={() => setActive(link.title)}
-            >
-              <a href={`#${link.id}`}>{link.title}</a>
-            </li>
-          )) }
-        </ul>
-        <div className="">
-            <img 
-            src={toggle ? <AiOutlineClose /> : <FiMenu /> } 
-            alt="menu"
-            className=""
-            onClick={() => setToggle(!toggle)}
-            />
-            <div className={`${!toggle ? 'hidden' : 'flex'} p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px z-10 rounded-xl]`}>
-                  <ul className="list-none flex justify-end items-start flex-col gap-4">
-                {navLinks.map((link) => (
-                  <li
-                  key={link.id}
-                  className={`${
-                    active === link.title 
-                    ? "text-[#3336dd]" : "text-[#000000] flex"
-                  } hover:text-[#3336dd] hover:text-[15px] font-medium cursor-pointer`}
-                    onClick={() => {
-                    setToggle(!toggle);
-                    setActive(link.title);
-                  }}
-                  >
-                    <a href={`#${link.id}`}>{link.title}</a>
-                  </li>
-                )) }
-              </ul>
+    const showMenu = () => {
+        setActive(!active)
+    }
+
+    return (
+        <header>
+            <div className='fixed w-full flex  items-center justify-between top-2 px-4 max-w-[1240px] h-24'>
+                <div className='uppercase font-bold text-center flex'>
+                    <h1>Car Hire</h1>
+                </div>
+                
+                <div className='flex items-center pr-5'>
+                        <nav>
+
+                            <div className="absolute right-6 md:hidden">
+                                < FiMenu onClick={showMenu} className='scale-150 cursor-pointer'/>
+                            </div>
+
+                            <ul className='hidden md:flex gap-5 p-6'>
+                                {navLinks.map((link) => (
+                                    <li
+                                        key={link.id}
+                                        className={`${
+                                            active === link.title
+                                                ? "text-[#3336dd]" : "text-[#20292f] text-[14px] flex"
+                                            } hover:text-black/50 font-medium cursor-pointer`}
+                                        onClick={() => setActive(link.title)}
+                                    >
+                                        <a href={`#${link.id}`}>{link.title}</a>
+                                    </li>
+                                ))}
+                            </ul>
+                            <div onClick={showMenu} className='block md:hidden'>
+                            {!active ? <AiOutlineClose size={20}/>  : <FiMenu />}
+                            </div>
+                            <MenuItems showMenu={showMenu} active={active}/>
+
+                        </nav>
+                        <a href="/" className='items-center font-[16px]'> <span><IoCart /></span></a>
+                </div>
+                
+                    
             </div>
-        </div>
-      </div>
-    </header>
-  );
+        </header>
+    );
 };
 
-export default Navbar; 
+export default Navbar;
