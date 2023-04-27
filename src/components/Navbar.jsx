@@ -18,17 +18,12 @@ const Navbar = () => {
     return (
         <header>
             <div className='fixed w-full flex  items-center justify-between top-2 px-4 max-w-[1240px] h-24'>
-                <div className='uppercase font-bold text-center flex'>
+                <div className='uppercase font-bold flex'>
                     <h1>Car Hire</h1>
                 </div>
                 
                 <div className='flex items-center pr-5'>
                         <nav>
-
-                            <div className="absolute right-6 md:hidden">
-                                < FiMenu onClick={showMenu} className='scale-150 cursor-pointer'/>
-                            </div>
-
                             <ul className='hidden md:flex gap-5 p-6'>
                                 {navLinks.map((link) => (
                                     <li
@@ -46,7 +41,7 @@ const Navbar = () => {
                             <div onClick={showMenu} className='block md:hidden'>
                             {!active ? <AiOutlineClose size={20}/>  : <FiMenu />}
                             </div>
-                            <MenuItems showMenu={showMenu} active={active}/>
+                            <MenuItems  active={active}/>
 
                         </nav>
                         <a href="/" className='items-center font-[16px]'> <span><IoCart /></span></a>
