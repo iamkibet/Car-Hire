@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import menu from "../assets/menu.svg";
-import navLinks from "../constants";
-import close from "../assets/close.svg";
+import navLinks from "../constants";;
+import { Link } from "react-router-dom";
+import { FiMenu } from 'react-icons/fi';
+import { AiOutlineClose } from "react-icons/ai";
 
 const Navbar = () => {
   const [active, setActive] = useState("");
@@ -41,7 +42,7 @@ const Navbar = () => {
         </ul>
         <div className="">
             <img 
-            src={toggle ? close : menu } 
+            src={toggle ? <AiOutlineClose /> : <FiMenu /> } 
             alt="menu"
             className=""
             onClick={() => setToggle(!toggle)}
