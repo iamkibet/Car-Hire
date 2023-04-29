@@ -6,7 +6,7 @@ import navLinks from "../constants";
 const MenuItems = ({active}) => {
     return ( 
         <div>
-            <ul className={!active ? 'fixed left-0 top-[105px] border-r border-r-gray-900 w-full px-[20%] pt-24  uppercase ease-in-out duration-500' : 'fixed hidden'}>
+            <ul className={!active ? 'fixed left-0 top-[105px] border-r border-r-gray-900 w-full px-[20%] ease-in-out duration-500 text-[14px]' : 'fixed hidden'}>
                     {navLinks.map((link) => (
                         <li
                             key={link.id}
