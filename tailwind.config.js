@@ -7,11 +7,11 @@ export default {
   theme: {
     theme: {
       screens: {
-        sm: '320px',
-        md: '768px',
-        lg: '1024px',
-        xl: '1280px',
-        '2xl': '1536px',
+        sm: '576px',
+        md: '980px',
+        lg: '992px',
+        xl: '1200px',
+        '2xl': '1400px',
       },
       colors: {
         'blue': '#1fb6ff',
