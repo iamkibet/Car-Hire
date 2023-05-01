@@ -3,83 +3,86 @@ import React from "react";
 
 const Hero = () => {
     return (
-        <div>
-            <div>
-                <div>
+        <div className="text-lg block">
+            <div className="bg-[#0f3052] text-white">
+                <div className="flex justify-between">
                     <div>
-                        <h1>
-                            Rental cars From just 
-                            <span>$20/Day</span>
-                        </h1>
+                        <div className="flex">
+                            <h1 className="text-[50px] flex items-center pl-[100px] pt-[100px] pb-5">
+                                Rental cars From just 
+                                <span>$20/Day</span>
+                            </h1>
+                        </div>
                     </div>
-                </div>
-            </div>
-            <div>
+                
                 <div>
                     <div>
                         <div>
-                            <div>
-                                <span>
-                                    Icon
-                                </span>
-                            </div>
-                            <div>
-                                <h4>
-                                    <span>
-                                        15%off
-                                    </span>
-                                </h4>
+                            <div className="pt-[100px] items-center pr-6">
                                 <div>
-                                        <p>
-                                            First Time Reservations
-                                        </p>
+                                    <span>
+                                        Icon
+                                    </span>
+                                </div>
+                                <div>
+                                    <h4>
+                                        <span>
+                                            15%off
+                                        </span>
+                                    </h4>
+                                    <div>
+                                            <p>
+                                                First Time Reservations
+                                            </p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div>
-                        <a href="/">Redeem</a>
-                    </div>
-                </div> 
-            </div>
-            <div>
+                        <div>
+                            <a href="/">Redeem</a>
+                        </div>
+                    </div> 
+                </div>
+                </div>
                 <div>
                     <div>
                         <div>
-                            <form action="/">
-                                <p>
-                                    <label htmlFor="/"> Car Type</label>
-                                    <select name="/" id="/">
-                                        <option value="/">Car Type</option>
-                                        <option value="/">Sedan</option>
-                                        <option value="/">Van</option>
-                                        <option value="/">MiniVan</option>
-                                    </select>
-                                </p>
-                                <p>
-                                    <label htmlFor="/">Pick Up Location</label>
-                                    <input type="text" placeholder="Pick Up Location"/>
-                                </p>
-                                <p>
-                                    <label htmlFor="/">Pick Up Date</label>
-                                    <input type="text" placeholder="Pick Up Date"/>
-                                </p>
-                                <p>
-                                    <label htmlFor="/">Pick Up Time</label>
-                                    <input type="text" placeholder="Pick Up Time"/>
-                                </p>
-                                <p>
-                                    <label htmlFor="/">Drop Off Date</label>
-                                    <input type="text" placeholder="Drop Off Date"/>
-                                </p>
-                                <p>
-                                    <label htmlFor="/">Drop Off Time</label>
-                                    <input type="text" placeholder="Drop Off Time"/>
-                                </p>
-                                <div>
-                                    <button type="submit">Request Now</button>
-                                </div>
-                            </form>
+                            <div>
+                                <form action="/">
+                                    <p>
+                                        <label htmlFor="/"> Car Type</label>
+                                        <select name="/" id="/">
+                                            <option value="/">Car Type</option>
+                                            <option value="/">Sedan</option>
+                                            <option value="/">Van</option>
+                                            <option value="/">MiniVan</option>
+                                        </select>
+                                    </p>
+                                    <p>
+                                        <label htmlFor="/">Pick Up Location</label>
+                                        <input type="text" placeholder="Pick Up Location"/>
+                                    </p>
+                                    <p>
+                                        <label htmlFor="/">Pick Up Date</label>
+                                        <input type="text" placeholder="Pick Up Date"/>
+                                    </p>
+                                    <p>
+                                        <label htmlFor="/">Pick Up Time</label>
+                                        <input type="text" placeholder="Pick Up Time"/>
+                                    </p>
+                                    <p>
+                                        <label htmlFor="/">Drop Off Date</label>
+                                        <input type="text" placeholder="Drop Off Date"/>
+                                    </p>
+                                    <p>
+                                        <label htmlFor="/">Drop Off Time</label>
+                                        <input type="text" placeholder="Drop Off Time"/>
+                                    </p>
+                                    <div>
+                                        <button type="submit">Request Now</button>
+                                    </div>
+                                </form>
+                            </div>
                         </div>
                     </div>
                 </div>
