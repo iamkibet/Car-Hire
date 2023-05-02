@@ -3,7 +3,7 @@ import React from "react";
 
 const Hero = () => {
     return (
-        <div className="text-lg block">
+        <div className="text-lg flex">
             <div className="bg-[#0f3052] text-white">
                 <div className="flex justify-between">
                     <div>
@@ -18,7 +18,7 @@ const Hero = () => {
                 <div>
                     <div>
                         <div>
-                            <div className="pt-[100px] items-center pr-6">
+                            <div className="pt-[100px] items-center pr-6 flex">
                                 <div>
                                     <span>
                                         Icon
