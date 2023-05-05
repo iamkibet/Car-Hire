@@ -3,7 +3,7 @@ import React from "react";
 
 const Hero = () => {
     return (
-        <div className="text-lg flex">
+        <div className="text-lg">
             <div className="bg-[#0f3052] text-white">
                 <div className="flex justify-between">
                     <div>
@@ -49,7 +49,7 @@ const Hero = () => {
                         <div>
                             <div>
                                 <form action="/">
-                                    <p>
+                                    <p className="bg-dark">
                                         <label htmlFor="/"> Car Type</label>
                                         <select name="/" id="/">
                                             <option value="/">Car Type</option>
