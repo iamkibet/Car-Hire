@@ -60,7 +60,7 @@ const Hero = () => {
                                     </p>
                                     <p>
                                         <label htmlFor="/">Pick Up Location</label>
-                                        <input type="text" placeholder="Pick Up Location"/>
+                                        <input type="text" placeholder="Pick Up?"/>
                                     </p>
                                     <p>
                                         <label htmlFor="/">Pick Up Date</label>
