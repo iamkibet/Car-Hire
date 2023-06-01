@@ -5,20 +5,18 @@ const Hero = () => {
     return (
         <div className="text-lg">
             <div className="bg-[#0f3052] text-white">
-                <div className="flex justify-between">
+                <div className="flex justify-between w-full px-6">
                     <div>
                         <div className="flex">
-                            <h1 className="text-[50px] flex items-center pl-[100px] pt-[100px] pb-5">
+                            <h1 className="text-[50px] flex items-center pt-[100px]">
                                 Rental cars From just 
                                 <span>$20/Day</span>
                             </h1>
                         </div>
                     </div>
-                
-                <div>
-                    <div>
+                    <div className="items-center text-[16px] flex">
                         <div>
-                            <div className="pt-[100px] items-center pr-6 flex">
+                            <div className="pt-[100px] flex items-center">
                                 <div>
                                     <span>
                                         Icon
@@ -42,7 +40,6 @@ const Hero = () => {
                             <a href="/">Redeem</a>
                         </div>
                     </div> 
-                </div>
                 </div>
                 <div>
                     <div>
