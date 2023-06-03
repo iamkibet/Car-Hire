@@ -4,6 +4,7 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Listings from './components/Listings';
 import Content from './components/Content';
+import Quality from './components/Quality';
 
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
       <Hero />
       <Listings />
       <Content />
+      < Quality />
     </div>
   )
 }
