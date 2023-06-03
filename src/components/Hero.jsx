@@ -1,5 +1,7 @@
 import React from "react";
 import { AiFillTag } from "react-icons/ai";
+import { BiPhoneCall } from "react-icons/bi";
+import { MdMonitor } from "react-icons/md";
 
 const Hero = () => {
     return (
@@ -56,88 +58,34 @@ const Hero = () => {
                             <img className="lg:col-span-2 mt-10" src="src\assets\carhero.png" alt="car-rental" />
                     </div>
                 </div>
-                
-                
-                
             </div>
-            <div>
-                <div>
-                    <div>
-                        <div>
-                            <div>
-                                <div>
-                                    <span>
-                                        Image
-                                    </span>
-                                </div>
-                                <div>
-                                    <h4>
-                                        <span>15% off</span>
-                                    </h4>
-                                    <div>
-                                        <p>First Time Reservations</p>
-                                    </div>
-                                </div>
-                            </div>
+                
+                <div className="flex justify-between mx-auto mb-4 max-w-4xl mt-32">
+                        <div className="grid place-items-center p-5 gap-y-3">
+                            < AiFillTag className="scale-150 fill-[#0f3052] h-20 w-8 mx-4"/>
+                            <h4 className="text-3xl font-bold p-3">
+                                15% off
+                            </h4>
+                            <p className="text-gray-800">First Time Reservations</p>
+                            <a href="/" className="text-[#3050d1] p-3 mt-2 uppercase">Redeem</a>
                         </div>
-                        <div>
-                            <a href="/">Redeem</a>
+                        <div className="grid place-items-center p-5 gap-y-3">
+                            < BiPhoneCall className="scale-150 fill-[#0f3052] h-20 w-8 mx-4"/>
+                            <h4 className="text-3xl font-bold p-3">
+                                Reserve by Phone
+                            </h4>
+                            <p className="text-gray-800">Call Us</p>
+                            <a href="/" className="text-[#3050d1] p-3 mt-2 uppercase">+254 720449012</a>
                         </div>
-                    </div>
-                    <div>
-                        <div>
-                            <div>
-                                <div>
-                                    <span>
-                                        Icon
-                                    </span>
-                                </div>
-                                <div>
-                                    <h4>
-                                        <span>
-                                            Reserve by Phone
-                                        </span>
-                                    </h4>
-                                    <div>
-                                        <p>
-                                            Call Us
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
+                        <div className="grid place-items-center p-5 gap-y-3">
+                            < MdMonitor className="scale-150 fill-[#0f3052] h-20 w-8 mx-4"/>
+                            <h4 className="text-3xl font-bold p-3">
+                                Reserve Online
+                            </h4>
+                            <p className="text-gray-800">In Just a few Clicks </p>
+                            <a href="/" className="text-[#3050d1] p-3 mt-2 uppercase">Get Started</a>
                         </div>
-                        <div>
-                            <a href="/">+254720449012</a>
-                        </div>
-                    </div>
-                    <div>
-                        <div>
-                            <div>
-                                <div>
-                                    <span>
-                                        Icon
-                                    </span>
-                                </div>
-                                <div>
-                                    <h4>
-                                        <span>
-                                            Reserve Online
-                                        </span>
-                                    </h4>
-                                    <div>
-                                        <p>
-                                            In Just a Few Clicks
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                            <a href="/">Get Started</a>
-                        </div>
-                    </div>
                 </div>
-            </div>
 
         </div>
     );
