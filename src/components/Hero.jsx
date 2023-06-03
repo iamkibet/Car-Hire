@@ -3,67 +3,57 @@ import { AiFillTag } from "react-icons/ai";
 
 const Hero = () => {
     return (
-        <div className="text-lg">
+        <div className="text-lg mx-auto">
             <div className="bg-[#0f3052] text-white">
-                <div className="max-w-5xl mx-auto">
-                    <div className="flex justify-between w-full px-6">
+                <div className=" mx-auto max-w-5xl">
+                    <div className="flex gap-x-20 mb-[50px]">
                         <div className="">
-                            <h1 className="text-[50px] flex items-center pt-[100px]">
+                            <h1 className="lg:text-[50px]  pt-[100px]">
                                 Rental cars From just
-                                <span className="pl-2"> $20/Day</span>
+                                <span className="pl-1 text-[#faa152]"> $20/Day</span>
                             </h1>
                         </div>
 
-                        <div className="pt-[100px] flex items-center">
-                            < AiFillTag />
-                            <div>
-                                <h4>
+                        <div className="pt-[100px] space-x-4 mx-3">
+                            <div className="flex ">
+                            < AiFillTag  className="scale-125 fill-[#faa152] h-20 w-8 mx-4 justify-center"/>
+                                <div className=" ">
+                                    <h4>
                                         15%off
-                                </h4>
-                                    <p>
-                                        First Time Reservations
-                                    </p>
-                                    <a href="/">Redeem</a>
+                                    </h4>
+                                        <p className="">
+                                            First Time Reservations
+                                        </p>
+                                </div>
                             </div>
+                                <a href="/" className="px-6 pt-2 pb-2 border-1 bg-[#ffffff27] uppercase text-sm">Redeem</a>
                         </div>
                     </div>
 
                     <div className="grid lg:grid-cols-3">
-                            <form className="col-span-1" action="/">
-                                <div className="bg-dark">
-                                    <label htmlFor="/"> Car Type</label>
-                                    <select name="/" id="/">
-                                        <option value="/">Car Type</option>
+                        <div className="col-span-1 max-w-sm p-2">
+                            <form className="flex flex-col gap-y-6 text-base text-gray-600" action="/">
+                                    <select className="p-3" name="/" id="/">
+                                        <option value="/" selected>Car Type</option>
                                         <option value="/">Sedan</option>
                                         <option value="/">Van</option>
                                         <option value="/">MiniVan</option>
                                     </select>
+                                    <input className="p-2" type="text" placeholder="Pick Up?"/>
+                                <div className="flex gap-x-4 justify-between">
+                                    <input className="w-2/3 p-2" type="text" placeholder="Pick Up Date"/>
+                                    <input className="w-2/3 p-2" type="text" placeholder="Pick Up Time"/>
                                 </div>
-                                <div>
-                                    <label htmlFor="/">Pick Up Location</label>
-                                    <input type="text" placeholder="Pick Up?"/>
+                                <div className="flex gap-x-4">
+                                    <input className="w-2/3 p-2" type="text" placeholder="Drop Off Date"/>
+                                    <input className="w-2/3 p-2" type="text" placeholder="Drop Off Time"/>
                                 </div>
-                                <div>
-                                    <label htmlFor="/">Pick Up Date</label>
-                                    <input type="text" placeholder="Pick Up Date"/>
-                                </div>
-                                <div>
-                                    <label htmlFor="/">Pick Up Time</label>
-                                    <input type="text" placeholder="Pick Up Time"/>
-                                </div>
-                                <div>
-                                    <label htmlFor="/">Drop Off Date</label>
-                                    <input type="text" placeholder="Drop Off Date"/>
-                                </div>
-                                <div>
-                                    <label htmlFor="/">Drop Off Time</label>
-                                    <input type="text" placeholder="Drop Off Time"/>
-                                </div>
-                                <div>
-                                    <button type="submit">Request Now</button>
+                                <div className="align  self-end">
+                                    <button className="bg-[#faa152] px-3 py-4 text-white uppercase" type="submit">Request Now</button>
                                 </div>
                             </form>
-                            <img className="lg:col-span-2" src="src\assets\carhero.png" alt="car-rental" />
+                        </div>
+                            <img className="lg:col-span-2 mt-10" src="src\assets\carhero.png" alt="car-rental" />
                     </div>
                 </div>
                 
