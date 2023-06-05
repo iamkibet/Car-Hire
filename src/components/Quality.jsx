@@ -3,7 +3,7 @@ import { BsCheckCircle } from "react-icons/bs";
 
 const Quality = () => {
     return (
-        <div className="bg-[url('src/assets/Car4.jpg')] bg-[#3050d1] mb-5 p-40 " >
+        <div className="flex bg-[#3050d1] mb-5 p-40 " >
             <div className=" justify-center items-center m-auto max-w-5xl w-screen">
                 <h1 className="text-[60px] text-[#fff] max-w-6xl m-4 p-10 mx-32 text-center">Lowest Rates & Highest Quality Rentals </h1>
             <div className="grid grid-cols-3 gap-20">

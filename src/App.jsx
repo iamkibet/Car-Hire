@@ -5,6 +5,7 @@ import Hero from './components/Hero';
 import Listings from './components/Listings';
 import Content from './components/Content';
 import Quality from './components/Quality';
+import Contacts from './components/Contacts';
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
       <Listings />
       <Content />
       < Quality />
+      < Contacts />
     </div>
   )
 }
