@@ -1,6 +1,6 @@
 import react from 'react'
 import { useState } from 'react';
-import MenuItems from './MenuItems';
+import MenuItems from './Home/MenuItems';
 import { FiMenu } from 'react-icons/fi';
 import navLinks from "../constants";
 import { IoCart } from 'react-icons/io5';
