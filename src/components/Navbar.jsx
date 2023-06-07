@@ -1,4 +1,5 @@
 import react from 'react'
+import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import MenuItems from './Home/MenuItems';
 import { FiMenu } from 'react-icons/fi';
@@ -24,17 +25,16 @@ const Navbar = () => {
                 <div className='flex items-center pr-5'>
                         <nav>
                             <ul className='hidden md:flex gap-5 p-6 text-[14px]'>
-                                {navLinks.map((link) => (
-                                    <li
-                                        key={link.id}
-                                        className={`${
-                                            active === link.title
-                                                ? "text-[#3336dd]" : "text-[#20292f] flex"
-                                            } hover:text-black/50 font-medium cursor-pointer`}
-                                        onClick={() => setActive(link.title)}
-                                    >
-                                        <a href={`#${link.id}`}>{link.title}</a>
-                                    </li>
+                            {navLinks.map((link) => (
+                                <li
+                                    key={link.id}
+                                    className={`${
+                                    active === link.title ? "text-[#3336dd] text-black" : "text-[#20292f]"
+                                    } flex hover:text-black/50 font-medium cursor-pointer`}
+                                    onClick={() => setActive(link.title)}
+                                >
+                                    <Link to={link.path}>{link.title}</Link>
+                                </li>
                                 ))}
                             </ul>
                             <div onClick={showMenu} className='block md:hidden'>

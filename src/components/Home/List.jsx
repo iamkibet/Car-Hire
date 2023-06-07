@@ -3,7 +3,7 @@ import { FaKey } from "react-icons/fa";
 import { BsFillPeopleFill } from "react-icons/bs";
 import { CiSettings } from "react-icons/ci";
 
-const Listings = () => {
+const List = () => {
     return (
        <div className="max-w-5xl mx-auto mt-20 p-3 mb-3" >
        <div className="flex mb-12 gap-10" >
@@ -96,4 +96,4 @@ const Listings = () => {
     )
 }
 
-export default Listings
+export default List
