@@ -36,7 +36,7 @@ const Hero = () => {
                         <div className="col-span-1 max-w-sm p-2">
                             <form className="flex flex-col gap-y-6 text-base text-gray-600" action="/">
                                     <select className="p-3" name="/" id="/">
-                                        <option value="/" selected>Car Type</option>
+                                        <option value="/">Car Type</option>
                                         <option value="/">Sedan</option>
                                         <option value="/">Van</option>
                                         <option value="/">MiniVan</option>

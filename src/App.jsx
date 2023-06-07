@@ -1,14 +1,18 @@
-import react from 'react';
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
 import Home from './components/Home/Home';
-
-
+import Listings from "./components/Home/Listings";
 
 function App() {
- 
   return (
-   
-    < Home />
-  )
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/Listings" element={<Listings />} />
+      </Routes>
+    </Router>
+  );
 }
 
-export default App
+export default App;

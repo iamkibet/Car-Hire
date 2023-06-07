@@ -6,6 +6,7 @@ const navLinks = [
     {
         id: "Listings",
         title: "Listings",
+        link: '/Listings'
     },
     {
         id: "Contact",
