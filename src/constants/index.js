@@ -10,9 +10,9 @@ const navLinks = [
         path: '/listings',
     },
     {
-        id: "Contact",
-        title: "Contact",
-        path: '/contact',
+        id: "Contacts",
+        title: "Contacts",
+        path: '/contacts',
     },
     {
         id: "Services",

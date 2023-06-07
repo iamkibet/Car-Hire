@@ -5,7 +5,7 @@ import { IoLocationOutline } from "react-icons/io5";
 
 
 
-const Contacts = () => {
+const Contact = () => {
   return (
     <div className="max-w-5xl mx-auto mb-3 ">
          <h1 className="font-bold p-4 w-full flex justify-center mb-3 text-[50px]">Contact Us</h1>
@@ -97,4 +97,4 @@ const Contacts = () => {
   );
 };
 
-export default Contacts;
+export default Contact;
