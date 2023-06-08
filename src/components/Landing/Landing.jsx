@@ -20,7 +20,7 @@ const Landing = () => {
                         < AiFillTags className="scale-50 h-32 w-32 fill-[#3050d1]"/>
                         <div className="">
                             <h1 className="font-bold text-xl flex ">Lowest Rates</h1>
-                            <p className="text-[#666] font-medium text-lg p-2 flex items-center">
+                            <p className="text-[#666] font-medium text-lg text-center p-2">
                             Vestibulum id ligula porta felis euismod semper. Donec ullamcorper nulla non metus auctor fringilla.
                             </p>
                         </div>
