@@ -9,5 +9,28 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
+    <script>
+
+      function formSubmit() {
+        var para = document.createElement("p");
+        para.innerHTML = "Hello World";
+
+        const root = {
+          name: "Teabag",
+          age: 20,
+          items: ["item1", "item2", "item3"],
+        };
+        console.log(root.name);
+        let form = "form";
+        let name = "name";
+        let age = 20;
+
+        let message = `Hello ${name}, you are ${age} years old`;
+      }
+
+      const submit2 = () => {
+        console.log("submit2");
+      };
+    </script>
   </body>
 </html>

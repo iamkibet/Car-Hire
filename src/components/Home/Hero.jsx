@@ -1,9 +1,55 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { AiFillTag } from "react-icons/ai";
 import { BiPhoneCall } from "react-icons/bi";
 import { MdMonitor } from "react-icons/md";
+import { json } from "react-router-dom";
 
 const Hero = () => {
+
+   const [formData, setFormData] =  useState({
+        cartype: "Van",
+        pickuptime: "",
+        pickupdate: "",
+        dropofftime: "",
+        dropoffdate: "",
+    })
+
+    useEffect(() => {
+            getForm();
+        },
+       []);
+
+    async function saveForm() {
+        // save to db
+        // http requestuest server
+        await fetch("http://localhost:4000/api/form", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(formData),
+        }).then((response) => {
+            response.json().then((result) => {
+                console.log(result);
+            });
+        });
+
+        // save to local storage
+        localStorage.setItem("formData", JSON.stringify(formData));
+    } 
+
+    function getForm() {
+        const data = localStorage.getItem("formData") 
+        if (data) setFormData(JSON.parse(data))
+    }
+
+    
+
+    function handleChange(e) {
+        setFormData({...formData, [e.target.name]: e.target.value})
+    }
+
+
     return (
         <div className="text-lg mx-auto">
             <div style={{ backgroundImage: "url('src/assets/Carbg.jpg')" }}>
@@ -35,24 +81,26 @@ const Hero = () => {
 
                         <div className="grid lg:grid-cols-3">
                             <div className="col-span-1 max-w-sm p-2">
-                                <form className="flex flex-col gap-y-6 text-base text-gray-600" action="/">
-                                        <select className="p-3" name="/" id="/">
-                                            <option value="/">Car Type</option>
-                                            <option value="/">Sedan</option>
-                                            <option value="/">Van</option>
-                                            <option value="/">MiniVan</option>
-                                        </select>
-                                        <input className="p-2" type="text" placeholder="Pick Up?"/>
+                                <form onSubmit={saveForm} className="flex flex-col gap-y-6 text-base text-gray-600" action="/">
+                                {formData.cartype}
+                                <select onChange={handleChange} className="p-3" name="cartype" id="/" value={formData.cartype}>
+                                    <option value="/">Car Type</option>
+                                    
+                                    <option value="Sedan">Sedan</option>
+                                    <option value="Van">Van</option>
+                                    <option value="Minivan">MiniVan</option>
+                                </select>
+                                       
                                     <div className="flex gap-x-4 justify-between">
-                                        <input className="w-2/3 p-2" type="text" placeholder="Pick Up Date"/>
-                                        <input className="w-2/3 p-2" type="text" placeholder="Pick Up Time"/>
+                                        <input value={formData.pickupdate} onChange={handleChange} className="w-2/3 p-2" name="pickupdate"  type="text" placeholder="Pick Up Date"/>
+                                        <input value={formData.pickuptime} onChange={handleChange} className="w-2/3 p-2" name="pickuptime"  type="text" placeholder="Pick Up Time"/>
                                     </div>
                                     <div className="flex gap-x-4">
-                                        <input className="w-2/3 p-2" type="text" placeholder="Drop Off Date"/>
-                                        <input className="w-2/3 p-2" type="text" placeholder="Drop Off Time"/>
+                                        <input value={formData.dropoffdate} onChange={handleChange} className="w-2/3 p-2"  name="dropoffdate"  type="text" placeholder="Drop Off Date"/>
+                                        <input value={formData.dropofftime} onChange={handleChange} className="w-2/3 p-2"  name="dropofftime"  type="text" placeholder="Drop Off Time"/>
                                     </div>
                                     <div className="align  self-end">
-                                        <button className="bg-[#faa152] px-3 py-4 text-white uppercase" type="submit">Request Now</button>
+                                        <button id="carForm" className="bg-[#faa152] px-3 py-4 text-white uppercase" type="submit">Request Now</button>
                                     </div>
                                 </form>
                             </div>

@@ -29,7 +29,7 @@ const Navbar = () => {
                                 <li
                                     key={link.id}
                                     className={`${
-                                    active === link.title ? "text-[#3336dd] text-black" : "text-[#20292f]"
+                                    active === link.title ? "text-black" : "text-[#20292f]"
                                     } flex hover:text-black/50 font-medium cursor-pointer`}
                                     onClick={() => setActive(link.title)}
                                 >
